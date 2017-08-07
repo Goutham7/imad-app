@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content = {
-    title: ' Article_one | Goutham'
-    heading: 'Article One'
-    date: 'August, 2017'
+var articleOne = {
+    title: ' Article_one | Goutham',
+    heading: 'Article One',
+    date: 'August, 2017',
     content:`
     <p>
            This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article
@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req,res) {
-    res.send(Create Template)(articleOne));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function (req,res) {
