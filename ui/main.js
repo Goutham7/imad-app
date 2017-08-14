@@ -25,7 +25,6 @@ request.onreadystatechange = function () {
 };
 
 //sumbit name
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     
@@ -46,9 +45,8 @@ request.onreadystatechange = function () {
     var ul = document.getElementById('namelist');
     ul.innerHTML = list;  
     }
-    // Not done yet
-}
-
+  }
+// Not done yet
 };
 // make the request
 var nameInput = document.getElementById('name');
