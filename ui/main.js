@@ -25,13 +25,12 @@ request.onreadystatechange = function () {
 };
 
 //sumbit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     
+ var request = new XMLHttpRequest();
  
-var request = new XMLHttpRequest();
 //Capture the repsonse and store it in variable
 request.onreadystatechange = function () {
     if(request.readyState===XMLHttpRequest.DONE){
@@ -52,6 +51,8 @@ request.onreadystatechange = function () {
 
 };
 // make the request
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
  request.open('GET', 'http://taazgoutham7.imad.hasura-app.io/submit-name?name='+ name, true);
  request.send(null); 
   //Make a request to the server and send the name
