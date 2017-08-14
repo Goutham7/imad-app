@@ -1,6 +1,5 @@
 // Counter code
 var button = document.getElementById('counter');
-var counter = 0;
 
 button.onclick = function() {
     
@@ -28,6 +27,7 @@ request.onreadystatechange = function () {
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
     
+    //Create Request object
  var request = new XMLHttpRequest();
  
 //Capture the repsonse and store it in variable
